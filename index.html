@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Lincoln Jewelry</title>
+    <link rel="shortcut icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/materialize.css">
+    <style>
+        header {
+            width: 100%;
+            top: 0;
+            height: 100px;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="white grey-text">
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo"><img id="logo" src="images/logo.png"></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="mailto:lincoln.teas@gmail.com">Contact</a></li>
+                    <li><a href="order.html">Order</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="parallax-container">
+        <div class="parallax"><img src="images/grandopening.jpg"></div>
+    </div>
+    <div class="section white">
+        <div class="row container">
+            <h2 class="header"></h2>
+            <p class="grey-text text-darken-3 lighten-3"></p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js "></script>
+    <script src="js/materialize.js "></script>
+    <script>
+        $(document).ready(function() {
+            $('.parallax').parallax();
+
+            function resize() {
+                $(".parallax-container").height(window.innerheight - $("#header").height());
+            }
+            resize();
+            $(document).resize(resize);
+        });
+    </script>
+</body>
+
+</html>
